@@ -10,4 +10,10 @@
 
 @interface SecondViewController : UIViewController
 
+@property (nonatomic, strong) UIView *leftView;
+@property (nonatomic, strong) UIView *rightView;
+@property (nonatomic, strong) UIButton *button1;
+@property (nonatomic, strong) UIButton *button2;
+@property (nonatomic, strong) UILabel *titleLabel;
+
 @end

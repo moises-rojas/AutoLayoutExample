@@ -22,6 +22,9 @@
 		B606F36118451D0F009E5D1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B606F34018451D0F009E5D1B /* UIKit.framework */; };
 		B606F36918451D0F009E5D1B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B606F36718451D0F009E5D1B /* InfoPlist.strings */; };
 		B606F36B18451D0F009E5D1B /* TestAutoLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B606F36A18451D0F009E5D1B /* TestAutoLayoutTests.m */; };
+		B606F37618451D94009E5D1B /* UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = B606F37518451D94009E5D1B /* UIView.m */; };
+		B606F378184523A1009E5D1B /* Teaching To The Test.gif in Resources */ = {isa = PBXBuildFile; fileRef = B606F377184523A1009E5D1B /* Teaching To The Test.gif */; };
+		B61C3CCC184546A2004CB84F /* UIView+test.m in Sources */ = {isa = PBXBuildFile; fileRef = B61C3CCB184546A2004CB84F /* UIView+test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,11 @@
 		B606F36618451D0F009E5D1B /* TestAutoLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestAutoLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		B606F36818451D0F009E5D1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B606F36A18451D0F009E5D1B /* TestAutoLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAutoLayoutTests.m; sourceTree = "<group>"; };
+		B606F37418451D94009E5D1B /* UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView.h; sourceTree = "<group>"; };
+		B606F37518451D94009E5D1B /* UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView.m; sourceTree = "<group>"; };
+		B606F377184523A1009E5D1B /* Teaching To The Test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Teaching To The Test.gif"; sourceTree = "<group>"; };
+		B61C3CCA184546A2004CB84F /* UIView+test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+test.h"; sourceTree = "<group>"; };
+		B61C3CCB184546A2004CB84F /* UIView+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+test.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,8 @@
 		B606F33018451D0F009E5D1B = {
 			isa = PBXGroup;
 			children = (
+				B61C3CCA184546A2004CB84F /* UIView+test.h */,
+				B61C3CCB184546A2004CB84F /* UIView+test.m */,
 				B606F34218451D0F009E5D1B /* TestAutoLayout */,
 				B606F36418451D0F009E5D1B /* TestAutoLayoutTests */,
 				B606F33B18451D0F009E5D1B /* Frameworks */,
@@ -115,6 +125,7 @@
 		B606F34218451D0F009E5D1B /* TestAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				B606F377184523A1009E5D1B /* Teaching To The Test.gif */,
 				B606F34B18451D0F009E5D1B /* AppDelegate.h */,
 				B606F34C18451D0F009E5D1B /* AppDelegate.m */,
 				B606F34E18451D0F009E5D1B /* Main.storyboard */,
@@ -124,6 +135,8 @@
 				B606F35518451D0F009E5D1B /* SecondViewController.m */,
 				B606F35718451D0F009E5D1B /* Images.xcassets */,
 				B606F34318451D0F009E5D1B /* Supporting Files */,
+				B606F37418451D94009E5D1B /* UIView.h */,
+				B606F37518451D94009E5D1B /* UIView.m */,
 			);
 			path = TestAutoLayout;
 			sourceTree = "<group>";
@@ -236,6 +249,7 @@
 				B606F35818451D0F009E5D1B /* Images.xcassets in Resources */,
 				B606F34718451D0F009E5D1B /* InfoPlist.strings in Resources */,
 				B606F35018451D0F009E5D1B /* Main.storyboard in Resources */,
+				B606F378184523A1009E5D1B /* Teaching To The Test.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61C3CCC184546A2004CB84F /* UIView+test.m in Sources */,
 				B606F35618451D0F009E5D1B /* SecondViewController.m in Sources */,
 				B606F34D18451D0F009E5D1B /* AppDelegate.m in Sources */,
 				B606F35318451D0F009E5D1B /* FirstViewController.m in Sources */,
 				B606F34918451D0F009E5D1B /* main.m in Sources */,
+				B606F37618451D94009E5D1B /* UIView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +403,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestAutoLayout/TestAutoLayout-Prefix.pch";
 				INFOPLIST_FILE = "TestAutoLayout/TestAutoLayout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -400,7 +418,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestAutoLayout/TestAutoLayout-Prefix.pch";
 				INFOPLIST_FILE = "TestAutoLayout/TestAutoLayout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -466,6 +486,7 @@
 				B606F37018451D0F009E5D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B606F37118451D0F009E5D1B /* Build configuration list for PBXNativeTarget "TestAutoLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +495,7 @@
 				B606F37318451D0F009E5D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
