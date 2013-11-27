@@ -7,6 +7,7 @@
 //
 
 #import "FloatingViewController.h"
+#import "UIView.h"
 
 @interface FloatingViewController ()
 
@@ -26,7 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    UILabel *notification = [UILabel autolayoutView];
+    notification.font = [UIFont systemFontOfSize:15.0];
+    notification.numberOfLines = 1;
+    notification.text = @"This is a notification";
+    [notification setLineBreakMode:NSLineBreakByClipping];
+    [self.view addSubview:notification];
+
 }
 
 - (void)didReceiveMemoryWarning

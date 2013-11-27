@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "UIView.h"
+#import "FloatingViewController.h"
 
 @interface FirstViewController ()
 
@@ -116,7 +117,7 @@
 }
 
 - (IBAction)showFloatingViewController:(id)sender {
-    [self.storyboard instantiateViewControllerWithIdentifier:@"myViewController"];
     
+    FloatingViewController *myController =  [self.storyboard instantiateViewControllerWithIdentifier:@"myViewController"];    
 }
 @end

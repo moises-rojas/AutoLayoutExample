@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Floating View Controller-->
         <scene sceneID="2Ef-Bd-CBB">
             <objects>
-                <viewController id="16l-rD-4Iw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="16l-rD-4Iw" customClass="FloatingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lbj-f5-Lqz"/>
                         <viewControllerLayoutGuide type="bottom" id="mZn-8J-YdE"/>
