@@ -115,4 +115,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showFloatingViewController:(id)sender {
+    [self.storyboard instantiateViewControllerWithIdentifier:@"myViewController"];
+    
+}
 @end

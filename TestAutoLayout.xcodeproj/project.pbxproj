@@ -24,6 +24,7 @@
 		B606F36B18451D0F009E5D1B /* TestAutoLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B606F36A18451D0F009E5D1B /* TestAutoLayoutTests.m */; };
 		B606F37618451D94009E5D1B /* UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = B606F37518451D94009E5D1B /* UIView.m */; };
 		B606F378184523A1009E5D1B /* Teaching To The Test.gif in Resources */ = {isa = PBXBuildFile; fileRef = B606F377184523A1009E5D1B /* Teaching To The Test.gif */; };
+		B60AD57D18469BB100DDA864 /* FloatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60AD57C18469BB100DDA864 /* FloatingViewController.m */; };
 		B61C3CCC184546A2004CB84F /* UIView+test.m in Sources */ = {isa = PBXBuildFile; fileRef = B61C3CCB184546A2004CB84F /* UIView+test.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		B606F37418451D94009E5D1B /* UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView.h; sourceTree = "<group>"; };
 		B606F37518451D94009E5D1B /* UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView.m; sourceTree = "<group>"; };
 		B606F377184523A1009E5D1B /* Teaching To The Test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Teaching To The Test.gif"; sourceTree = "<group>"; };
+		B60AD57B18469BB100DDA864 /* FloatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingViewController.h; sourceTree = "<group>"; };
+		B60AD57C18469BB100DDA864 /* FloatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingViewController.m; sourceTree = "<group>"; };
 		B61C3CCA184546A2004CB84F /* UIView+test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+test.h"; sourceTree = "<group>"; };
 		B61C3CCB184546A2004CB84F /* UIView+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+test.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +140,8 @@
 				B606F34318451D0F009E5D1B /* Supporting Files */,
 				B606F37418451D94009E5D1B /* UIView.h */,
 				B606F37518451D94009E5D1B /* UIView.m */,
+				B60AD57B18469BB100DDA864 /* FloatingViewController.h */,
+				B60AD57C18469BB100DDA864 /* FloatingViewController.m */,
 			);
 			path = TestAutoLayout;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				B606F35618451D0F009E5D1B /* SecondViewController.m in Sources */,
 				B606F34D18451D0F009E5D1B /* AppDelegate.m in Sources */,
 				B606F35318451D0F009E5D1B /* FirstViewController.m in Sources */,
+				B60AD57D18469BB100DDA864 /* FloatingViewController.m in Sources */,
 				B606F34918451D0F009E5D1B /* main.m in Sources */,
 				B606F37618451D94009E5D1B /* UIView.m in Sources */,
 			);

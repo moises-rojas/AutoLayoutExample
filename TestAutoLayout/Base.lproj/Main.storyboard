@@ -5,6 +5,26 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="2Ef-Bd-CBB">
+            <objects>
+                <viewController id="16l-rD-4Iw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lbj-f5-Lqz"/>
+                        <viewControllerLayoutGuide type="bottom" id="mZn-8J-YdE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AE6-Ym-euC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Svg-GH-T0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="37"/>
+        </scene>
         <!--First View Controller - First-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
@@ -47,6 +67,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showFloatingViewController:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="2gC-aZ-b9J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzf-6k-cyH">
                                 <rect key="frame" x="254" y="205" width="46" height="30"/>

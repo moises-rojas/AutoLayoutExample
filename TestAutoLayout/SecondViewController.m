@@ -15,6 +15,11 @@
 
 @implementation SecondViewController
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -23,51 +28,70 @@
     UIView *headerView = [UIView autolayoutView];
     headerView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:headerView];
-    
 
     _titleLabel = [UILabel autolayoutView];
-    //_titleLabel = [[UILabel alloc] init];
     _titleLabel.font = [UIFont systemFontOfSize:25.0];
     _titleLabel.numberOfLines = 1;
     _titleLabel.text = @"The Title";
     [_titleLabel setLineBreakMode:NSLineBreakByClipping];
     [headerView addSubview:_titleLabel];
     
-
     _leftView = [UIView autolayoutView];
-    _rightView = [UIView autolayoutView];
-    _button1 = [UIView autolayoutView];
-    _button2 = [UIView autolayoutView];
+    _leftView.backgroundColor = [UIColor lightGrayColor];
+    [headerView addSubview:_leftView];
     
+    
+    _rightView = [UIView autolayoutView];
+    _rightView.backgroundColor = [UIColor redColor];
+    [headerView addSubview:_rightView];
+    
+    
+    _button1 = [UIButton autolayoutView];
+    _button1.backgroundColor = [UIColor orangeColor];
+    _button1.titleLabel.font = [UIFont systemFontOfSize:15.0];
+    [_button1 setTitle:@"Button" forState:UIControlStateNormal];
+    [headerView addSubview:_button1];
+    
+    
+    _button2 = [UIButton autolayoutView];
+    _button2.backgroundColor = [UIColor grayColor];
+    _button2.titleLabel.font = [UIFont systemFontOfSize:15.0];
+    [_button2 setTitle:@"Button" forState:UIControlStateNormal];
+    [headerView addSubview:_button2];
     
     NSDictionary *views = NSDictionaryOfVariableBindings(headerView,_titleLabel,_leftView,_rightView, _button1, _button2);
     
     // Header view fills the width of its superview
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[headerView]|" options:0 metrics:0 views:views]];
     
-     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[headerView]" options:0 metrics:0 views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[headerView]" options:0 metrics:0 views:views]];
     
-//    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(>=113)-[_titleLabel(94)]-(>=113)-|" options:0 metrics:nil views:views]]; old code
-    
-     [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[headerView]-(<=1)-[_titleLabel]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:views]];
+    /*[headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[headerView]-(<=1)-[_titleLabel]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:views]];
     
     [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[headerView]-(<=1)-[_titleLabel]" options:NSLayoutFormatAlignAllCenterY metrics:nil views:views]];
     
-    //[headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_titleLabel]" options:0 metrics:nil views:views]];
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_titleLabel]" options:0 metrics:nil views:views]];*/
     
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[headerView]-(<=1)-[_titleLabel]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:views]];
+
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_titleLabel]" options:0 metrics:nil views:views]];
     
-    /*
-    // Headline and image horizontal layout
-    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-padding-[headline]-padding-[imageView(imageEdge)]-padding-|" options:0 metrics:metrics views:views]];
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_leftView(>=136)]-[_rightView(>=_leftView)]-|" options:0 metrics:nil views:views]];
+
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(==58)-[_leftView(139)]" options:0 metrics:nil views:views]];
     
-    // Headline and byline vertical layout - spacing at least zero between the two
-    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding-[headline]->=0-[byline]-padding-|" options:NSLayoutFormatAlignAllLeft metrics:metrics views:views]];
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(==58)-[_rightView(139)]" options:0 metrics:nil views:views]];
     
-    // Image and button vertical layout - spacing at least 15 between the two
-    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding-[imageView(imageEdge)]->=padding-[button]-padding-|" options:NSLayoutFormatAlignAllLeft | NSLayoutFormatAlignAllRight metrics:metrics views:views]];
-     */
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_leftView]-[_button1(19)]" options:0 metrics:nil views:views]];
+
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_rightView]-[_button2(19)]" options:0 metrics:nil views:views]];
+    
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_button1(46)]" options:0 metrics:nil views:views]];
+    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_button2(46)]-|" options:0 metrics:nil views:views]];
 
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
