@@ -34,6 +34,14 @@
     notification.text = @"This is a notification";
     [notification setLineBreakMode:NSLineBreakByClipping];
     [self.view addSubview:notification];
+    
+    UIView *parentView = self.view;
+    
+    NSDictionary *views = NSDictionaryOfVariableBindings(parentView,notification);
+
+    [parentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==40)-[notification]" options:0 metrics:nil views:views]];
+    [parentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[notification]-(44)-|" options:0 metrics:nil views:views]];
+    
 
 }
 

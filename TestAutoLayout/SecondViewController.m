@@ -66,12 +66,6 @@
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[headerView]" options:0 metrics:0 views:views]];
     
-    /*[headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[headerView]-(<=1)-[_titleLabel]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:views]];
-    
-    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[headerView]-(<=1)-[_titleLabel]" options:NSLayoutFormatAlignAllCenterY metrics:nil views:views]];
-    
-    [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_titleLabel]" options:0 metrics:nil views:views]];*/
-    
     [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[headerView]-(<=1)-[_titleLabel]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:views]];
 
     [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_titleLabel]" options:0 metrics:nil views:views]];
@@ -90,8 +84,6 @@
     [headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_button2(46)]-|" options:0 metrics:nil views:views]];
 
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {

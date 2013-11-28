@@ -409,7 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestAutoLayout/TestAutoLayout-Prefix.pch";
 				INFOPLIST_FILE = "TestAutoLayout/TestAutoLayout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
@@ -424,7 +424,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestAutoLayout/TestAutoLayout-Prefix.pch";
 				INFOPLIST_FILE = "TestAutoLayout/TestAutoLayout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
