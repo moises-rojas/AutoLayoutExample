@@ -3,11 +3,11 @@
 //  TestAutoLayout
 //
 //  Created by Moises Rojas on 11/27/13.
-//  Copyright (c) 2013 Moises Rojas. All rights reserved.
+//  Copyright (c) 2013 Growth Acceleration Partners. All rights reserved.
 //
 
 #import "FloatingViewController.h"
-#import "UIView.h"
+#import "UIView+autolayoutView.h"
 
 @interface FloatingViewController ()
 
@@ -19,7 +19,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -31,6 +30,7 @@
     UILabel *notification = [UILabel autolayoutView];
     notification.font = [UIFont systemFontOfSize:15.0];
     notification.numberOfLines = 1;
+    notification.backgroundColor = [UIColor clearColor];
     notification.text = @"This is a notification";
     [notification setLineBreakMode:NSLineBreakByClipping];
     [self.view addSubview:notification];
@@ -40,9 +40,7 @@
     NSDictionary *views = NSDictionaryOfVariableBindings(parentView,notification);
 
     [parentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==40)-[notification]" options:0 metrics:nil views:views]];
-    [parentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[notification]-(44)-|" options:0 metrics:nil views:views]];
-    
-
+    [parentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[notification]-(15)-|" options:0 metrics:nil views:views]];
 }
 
 - (void)didReceiveMemoryWarning

@@ -3,11 +3,11 @@
 //  TestAutoLayout
 //
 //  Created by Moises Rojas on 11/26/13.
-//  Copyright (c) 2013 Moises Rojas. All rights reserved.
+//  Copyright (c) 2013 Growth Acceleration Partners. All rights reserved.
 //
 
 #import "FirstViewController.h"
-#import "UIView.h"
+#import "UIView+autolayoutView.h"
 #import "FloatingViewController.h"
 
 @interface FirstViewController ()
