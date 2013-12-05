@@ -1,3 +1,5 @@
+![Picture](http://www.growthaccelerationpartners.com/blog/wp-content/uploads/2013/09/gap_logo.png)
+
 AutoLayoutExample
 =================
 
